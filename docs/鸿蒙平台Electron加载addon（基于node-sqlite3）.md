@@ -28,6 +28,8 @@ module.exports = exports = binding;
 	在`"conditions"`的`"include_dirs"`中增加：`"electron-napi-library/include"`
 ![](./images/1757402068529_image.png)
 
+> 上述libshim.a 源代码在https://github.com/ohosvscode/electron-ohos-napi-shim
+
 如上图所示：
 	在`"defines"`中增加：`"HIDE_NAPI_AND_UV"`
 **（四）**修改文件node-sqlite3/package.json
