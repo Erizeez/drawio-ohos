@@ -52,7 +52,7 @@ const TAG: string = 'AppWindow';
 @injectable()
 export class AppWindowAdapter extends BaseAdapter {
   private abilityManager: AbilityManager;
-  private bundleName: string = 'com.huawei.ohos_electron';
+  private bundleName: string = 'io.github.erizeez.drawio';
   private bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION |
                         bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_METADATA;
   private queryWindowNum: number = 10;  
@@ -464,7 +464,7 @@ export class AppWindowAdapter extends BaseAdapter {
   setUseNativeFrame(id: number, useNativeFrame: boolean) {
     let windowClass = this.getWindow(id);
     try {
-      windowClass?.setWindowDecorVisible(useNativeFrame);
+      windowClass?.setWindowDecorVisible(true);
       windowClass?.setWindowTitleMoveEnabled(useNativeFrame);
     } catch (exception) {
       LogUtil.error(TAG, `Failed to set the visibility of window decor. Cause code: ${exception.code}, message: ${exception.message}`);

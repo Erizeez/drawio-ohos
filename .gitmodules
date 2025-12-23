@@ -1,0 +1,3 @@
+[submodule "web_engine/src/main/resources/resfile/resources/app"]
+	path = web_engine/src/main/resources/resfile/resources/app
+	url = git@github.com:jgraph/drawio-desktop.git

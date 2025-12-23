@@ -168,7 +168,7 @@ export class WebAbility extends WebBaseAbility {
 
       let window: window.Window = windowStage.getMainWindowSync();
       // hide title bar
-      window.setWindowDecorVisible(!this.hideTitleBar);
+      window.setWindowDecorVisible(true);
       if (this.useDarkMode) {
         let buttonStyle: window.DecorButtonStyle = {
           colorMode: ConfigurationConstant.ColorMode.COLOR_MODE_DARK
@@ -179,7 +179,7 @@ export class WebAbility extends WebBaseAbility {
       this.maximizable = this.maximizable && !this.hideTitleBar;
       this.minimizable = this.minimizable && !this.hideTitleBar;
       this.closable = this.closable && !this.hideTitleBar;
-      window.setWindowTitleButtonVisible(this.maximizable, this.minimizable, this.closable);
+      // window.setWindowTitleButtonVisible(this.maximizable, this.minimizable, this.closable);
       window.setWindowTopmost(this.alwaysOntop);
       window.setResizeByDragEnabled(this.resizable);
       windowStage.setWindowModal(this.isModal);

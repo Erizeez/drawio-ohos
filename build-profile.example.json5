@@ -11,12 +11,13 @@
           "nativeLib": {
             "collectAllLibs": true
           }
-        }
+        },
+        "targetSdkVersion": "6.0.1(21)"
       }
     ],
     "buildModeSet": [
       {
-        "name": "debug",
+        "name": "debug"
       },
       {
         "name": "release"

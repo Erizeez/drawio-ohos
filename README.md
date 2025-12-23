@@ -1,3 +1,52 @@
+# draw.io for OpenHarmony (OHOS)
+
+This repository is **not an official release** of draw.io.
+
+It provides an **unofficial port of the official draw.io Desktop application**, packaging the original Electron-based implementation of **drawio-desktop** for the OpenHarmony (OHOS) platform.
+
+## Why not use the web version?
+
+Although draw.io offers a web-based version, it is not well suited for local and offline workflows on OHOS:
+
+- File saving in the web version is cumbersome and requires explicit user actions for each save operation.
+- The web version relies heavily on an active Internet connection, which limits its usability in offline or restricted-network environments.
+
+## Downloads
+
+Please refer to the release page.
+
+## Build
+
+Clone this repo.
+
+```shell
+git clone git@github.com:Erizeez/drawio-ohos.git
+git submodule update --recursive --init
+```
+
+Setup Node.js v22.
+
+Then prepare for drawio.
+```shell
+cd web_engine/src/main/resources/resfile/resources/app
+npm install -g yarn
+yarn install
+yarn run sync
+```
+
+Copy `build-profile.example.json5` to `build-profile.json5` and configure signing configs in DevEco.
+
+Finally build in DevEco and deploy!
+
+## Acknowledgements
+
+This project is built upon the template provided by  
+https://github.com/ohosvscode/ohos_electron_hap.
+
+The template offers a practical reference for packaging Electron-based applications into HAP format and significantly simplifies the integration process with the OpenHarmony application framework. The authors and maintainers of this project are sincerely acknowledged for their valuable work.
+
+The original README is as follows:
+
 # HarmonyOS Electron HAP
 
 English | [简体中文](./README-CN.md)
