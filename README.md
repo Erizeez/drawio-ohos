@@ -17,22 +17,25 @@ Please refer to the release page.
 
 ## Build
 
-Clone this repo.
+Clone drawio desktop.
 
 ```shell
-git clone git@github.com:Erizeez/drawio-ohos.git
+git clone git@github.com:Erizeez/drawio-desktop.git
 git submodule update --recursive --init
 ```
 
-Setup Node.js v22.
-
-Then prepare for drawio.
+Setup Node.js v22 and build `app.asar`.
 ```shell
-cd web_engine/src/main/resources/resfile/resources/app
+cd drawio-desktop
 npm install -g yarn
 yarn install
 yarn run sync
+yarn run release-ohos
 ```
+
+Then you will find `app.asar` in `dist/`.
+
+Switch to this repo, copy that file to `web_engine/src/main/resources/resfile/resources/app.asar`
 
 Copy `build-profile.example.json5` to `build-profile.json5` and configure signing configs in DevEco.
 

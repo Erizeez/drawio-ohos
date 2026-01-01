@@ -45,3 +45,4 @@ coverage/
 .env.production.local
 
 build-profile.json5
+web_engine/src/main/resources/resfile/resources/app.asar
